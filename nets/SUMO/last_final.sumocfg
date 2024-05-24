@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-20 02:16:19 by Eclipse SUMO sumo Version 1.18.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Reall02-Gongguan.net.xml"/>
+        <route-files value="LAST.rou.xml"/>
+        <additional-files value="backup.add.xml"/>
+    </input>
+
+    <output>
+        <fcd-output value="Output/fcdOutput.xml"/>
+        <full-output value="Output/outputs.xml"/>
+        <summary-output value="Output/summary.xml"/>
+        <stop-output value="Output/stopOutput.xml"/>
+        <edgedata-output value="Output/edgedata.xml"/>
+        <statistic-output value="Output/statisticOutput.xml"/>
+    </output>
+
+</configuration>

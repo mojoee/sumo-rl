@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-01-05 16:53:37 by Eclipse SUMO GUI Version 1.18.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Reall02-Gongguan.net.xml"/>
+        <route-files value="C:\Users\ivand\Documents\SUMO - Copy\LAST\LAST.rou.xml"/>
+        <additional-files value="C:\Users\ivand\Documents\SUMO - Copy\LAST\backup.add.xml"/>
+    </input>
+
+    <output>
+        <fcd-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/fcdOutput.xml"/>
+        <full-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/outputs.xml"/>
+        <summary-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/summary.xml"/>
+        <stop-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/stopOutput.xml"/>
+        <edgedata-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/edgedata.xml"/>
+        <statistic-output value="C:\Users\ivand\Documents\SUMO - Copy\LAST\Output/statisticOutput.xml"/>
+    </output>
+
+    <random_number>
+        <seed value="1234"/>
+    </random_number>
+
+</configuration>
+-->
+
+<stops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/stopinfo_file.xsd">
+</stops>

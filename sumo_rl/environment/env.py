@@ -20,7 +20,7 @@ from pettingzoo import AECEnv
 from pettingzoo.utils import agent_selector, wrappers
 from pettingzoo.utils.conversions import parallel_wrapper_fn
 
-from .observations import DefaultObservationFunction, ObservationFunction
+from .observations import DefaultObservationFunction, ObservationFunction, CustomObservationFunction
 from .traffic_signal import TrafficSignal
 
 
@@ -96,7 +96,7 @@ class SumoEnvironment(gym.Env):
         max_green: int = 50,
         single_agent: bool = False,
         reward_fn: Union[str, Callable, dict] = "diff-waiting-time",
-        observation_class: ObservationFunction = DefaultObservationFunction,
+        observation_class: ObservationFunction = CustomObservationFunction,
         add_system_info: bool = True,
         add_per_agent_info: bool = True,
         sumo_seed: Union[str, int] = "random",
@@ -236,13 +236,12 @@ class SumoEnvironment(gym.Env):
             self.sumo = traci.getConnection(self.label)
 
         if self.use_gui or self.render_mode is not None:
-            if "DEFAULT_VIEW" not in dir(traci.gui):  # traci.gui.DEFAULT_VIEW is not defined in libsumo
-                traci.gui.DEFAULT_VIEW = "View #0"
             self.sumo.gui.setSchema(traci.gui.DEFAULT_VIEW, "real world")
 
     def reset(self, seed: Optional[int] = None, **kwargs):
         """Reset the environment."""
         super().reset(seed=seed, **kwargs)
+        linked_ts = self.find_linked_traffic_signals()
 
         if self.episode != 0:
             self.close()
@@ -281,6 +280,7 @@ class SumoEnvironment(gym.Env):
                     self.begin_time,
                     self.reward_fn,
                     self.sumo,
+                    neighbors=linked_ts.get(ts, [])
                 )
                 for ts in self.ts_ids
             }
@@ -305,7 +305,7 @@ class SumoEnvironment(gym.Env):
             If single_agent is True, action is an int, otherwise it expects a dict with keys corresponding to traffic signal ids.
         """
         # No action, follow fixed TL defined in self.phases
-        if self.fixed_ts or action is None or action == {}:
+        if action is None or action == {}:
             for _ in range(self.delta_time):
                 self._sumo_step()
         else:
@@ -348,6 +348,8 @@ class SumoEnvironment(gym.Env):
                 if self.traffic_signals[ts].time_to_act:
                     self.traffic_signals[ts].set_next_phase(action)
 
+        
+
     def _compute_dones(self):
         dones = {ts_id: False for ts_id in self.ts_ids}
         dones["__all__"] = self.sim_step >= self.sim_max_time
@@ -364,27 +366,15 @@ class SumoEnvironment(gym.Env):
 
     def _compute_observations(self):
         self.observations.update(
-            {
-                ts: self.traffic_signals[ts].compute_observation()
-                for ts in self.ts_ids
-                if self.traffic_signals[ts].time_to_act or self.fixed_ts
-            }
+            {ts: self.traffic_signals[ts].compute_observation() for ts in self.ts_ids if self.traffic_signals[ts].time_to_act}
         )
-        return {
-            ts: self.observations[ts].copy()
-            for ts in self.observations.keys()
-            if self.traffic_signals[ts].time_to_act or self.fixed_ts
-        }
+        return {ts: self.observations[ts].copy() for ts in self.observations.keys() if self.traffic_signals[ts].time_to_act}
 
     def _compute_rewards(self):
         self.rewards.update(
-            {
-                ts: self.traffic_signals[ts].compute_reward()
-                for ts in self.ts_ids
-                if self.traffic_signals[ts].time_to_act or self.fixed_ts
-            }
+            {ts: self.traffic_signals[ts].compute_reward() for ts in self.ts_ids if self.traffic_signals[ts].time_to_act}
         )
-        return {ts: self.rewards[ts] for ts in self.rewards.keys() if self.traffic_signals[ts].time_to_act or self.fixed_ts}
+        return {ts: self.rewards[ts] for ts in self.rewards.keys() if self.traffic_signals[ts].time_to_act}
 
     @property
     def observation_space(self):
@@ -499,7 +489,24 @@ class SumoEnvironment(gym.Env):
     def _discretize_density(self, density):
         return min(int(density * 10), 9)
 
+    def find_linked_traffic_signals(self):
+        linked_signals = {}
 
+        # Create a dictionary with the input and output lanes of each traffic signal
+        ts_lanes = {ts_id: {'in': self.traffic_signals[ts_id].lanes, 'out': self.traffic_signals[ts_id].out_lanes}
+                    for ts_id in self.ts_ids}
+
+        # Compare each traffic signal's output lanes with every other traffic signal's input lanes
+        for ts_id, lanes in ts_lanes.items():
+            linked_signals[ts_id] = []
+            for other_ts_id, other_lanes in ts_lanes.items():
+                if ts_id != other_ts_id:
+                    # Check if any output lane of the current traffic signal is an input lane of another traffic signal
+                    if any(out_lane in other_lanes['in'] for out_lane in lanes['out']):
+                        linked_signals[ts_id].append(other_ts_id)
+
+        return linked_signals
+    
 class SumoEnvironmentPZ(AECEnv, EzPickle):
     """A wrapper for the SUMO environment that implements the AECEnv interface from PettingZoo.
 
@@ -586,22 +593,17 @@ class SumoEnvironmentPZ(AECEnv, EzPickle):
         if self.truncations[self.agent_selection] or self.terminations[self.agent_selection]:
             return self._was_dead_step(action)
         agent = self.agent_selection
+        
         if not self.action_spaces[agent].contains(action):
             raise Exception(
                 "Action for agent {} must be in Discrete({})."
                 "It is currently {}".format(agent, self.action_spaces[agent].n, action)
             )
 
-        if not self.env.fixed_ts:
-            self.env._apply_actions({agent: action})
+        self.env._apply_actions({agent: action})
 
         if self._agent_selector.is_last():
-            if not self.env.fixed_ts:
-                self.env._run_steps()
-            else:
-                for _ in range(self.env.delta_time):
-                    self.env._sumo_step()
-
+            self.env._run_steps()
             self.env._compute_observations()
             self.rewards = self.env._compute_rewards()
             self.compute_info()
@@ -614,3 +616,7 @@ class SumoEnvironmentPZ(AECEnv, EzPickle):
         self.agent_selection = self._agent_selector.next()
         self._cumulative_rewards[agent] = 0
         self._accumulate_rewards()
+
+    def find_linked_traffic_signals(self):
+            """Proxy method to access find_linked_traffic_signals from the underlying SumoEnvironment."""
+            return self.env.find_linked_traffic_signals

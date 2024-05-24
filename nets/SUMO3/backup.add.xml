@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-01-08 17:47:32 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Other additionals -->
+    <rerouter id="rr_6" edges="E24" pos="-309.04,-50.42">
+        <interval begin="0.00" end="18000.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="39600.00" end="57600.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="75600.00" end="104400.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="126000.00" end="144000.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="162000.00" end="190800.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="212400.00" end="230400.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="248400.00" end="277200.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="298800.00" end="316800.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="334800.00" end="363600.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="385200.00" end="403200.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="421200.00" end="432000.00">
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="18000.00" end="39600.00">
+            <destProbReroute id="E27" probability="0.36"/>
+            <destProbReroute id="E37" probability="0.12"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="104400.00" end="126000.00">
+            <destProbReroute id="E27" probability="0.36"/>
+            <destProbReroute id="E37" probability="0.12"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="190800.00" end="212400.00">
+            <destProbReroute id="E27" probability="0.36"/>
+            <destProbReroute id="E37" probability="0.12"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="277200.00" end="298800.00">
+            <destProbReroute id="E27" probability="0.36"/>
+            <destProbReroute id="E37" probability="0.12"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="363600.00" end="385200.00">
+            <destProbReroute id="E27" probability="0.36"/>
+            <destProbReroute id="E37" probability="0.12"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="57600.00" end="75600.00">
+            <destProbReroute id="E27" probability="0.38"/>
+            <destProbReroute id="E37" probability="0.10"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="144000.00" end="162000.00">
+            <destProbReroute id="E27" probability="0.38"/>
+            <destProbReroute id="E37" probability="0.10"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="230400.00" end="248400.00">
+            <destProbReroute id="E27" probability="0.38"/>
+            <destProbReroute id="E37" probability="0.10"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="316800.00" end="334800.00">
+            <destProbReroute id="E27" probability="0.38"/>
+            <destProbReroute id="E37" probability="0.10"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+        <interval begin="403200.00" end="421200.00">
+            <destProbReroute id="E27" probability="0.38"/>
+            <destProbReroute id="E37" probability="0.10"/>
+            <destProbReroute id="E28" probability="0.52"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_7" edges="E35.61" pos="-260.88,-60.02">
+        <interval begin="0.00" end="18000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="39600.00" end="57600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="75600.00" end="104400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="126000.00" end="144000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="162000.00" end="190800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="212400.00" end="230400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="248400.00" end="277200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="298800.00" end="316800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="334800.00" end="363600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="385200.00" end="403200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="421200.00" end="432000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.34"/>
+        </interval>
+        <interval begin="18000.00" end="39600.00">
+            <destProbReroute id="E31" probability="0.19"/>
+            <destProbReroute id="E27" probability="0.07"/>
+            <destProbReroute id="E37" probability="0.74"/>
+        </interval>
+        <interval begin="104400.00" end="126000.00">
+            <destProbReroute id="E31" probability="0.19"/>
+            <destProbReroute id="E27" probability="0.07"/>
+            <destProbReroute id="E37" probability="0.74"/>
+        </interval>
+        <interval begin="190800.00" end="212400.00">
+            <destProbReroute id="E31" probability="0.19"/>
+            <destProbReroute id="E27" probability="0.07"/>
+            <destProbReroute id="E37" probability="0.74"/>
+        </interval>
+        <interval begin="277200.00" end="298800.00">
+            <destProbReroute id="E31" probability="0.19"/>
+            <destProbReroute id="E27" probability="0.07"/>
+            <destProbReroute id="E37" probability="0.74"/>
+        </interval>
+        <interval begin="363600.00" end="385200.00">
+            <destProbReroute id="E31" probability="0.19"/>
+            <destProbReroute id="E27" probability="0.07"/>
+            <destProbReroute id="E37" probability="0.74"/>
+        </interval>
+        <interval begin="57600.00" end="75600.00">
+            <destProbReroute id="E31" probability="0.29"/>
+            <destProbReroute id="E27" probability="0.09"/>
+            <destProbReroute id="E37" probability="0.62"/>
+        </interval>
+        <interval begin="144000.00" end="162000.00">
+            <destProbReroute id="E31" probability="0.29"/>
+            <destProbReroute id="E27" probability="0.09"/>
+            <destProbReroute id="E37" probability="0.62"/>
+        </interval>
+        <interval begin="230400.00" end="248400.00">
+            <destProbReroute id="E31" probability="0.29"/>
+            <destProbReroute id="E27" probability="0.09"/>
+            <destProbReroute id="E37" probability="0.62"/>
+        </interval>
+        <interval begin="316800.00" end="334800.00">
+            <destProbReroute id="E31" probability="0.29"/>
+            <destProbReroute id="E27" probability="0.09"/>
+            <destProbReroute id="E37" probability="0.62"/>
+        </interval>
+        <interval begin="403200.00" end="421200.00">
+            <destProbReroute id="E31" probability="0.29"/>
+            <destProbReroute id="E27" probability="0.09"/>
+            <destProbReroute id="E37" probability="0.62"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_8" edges="E30" pos="-302.13,23.60">
+        <interval begin="0.00" end="18000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="39600.00" end="57600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="75600.00" end="104400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="126000.00" end="144000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="162000.00" end="190800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="212400.00" end="230400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="248400.00" end="277200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="298800.00" end="316800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="334800.00" end="363600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="385200.00" end="403200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="421200.00" end="432000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E27" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="18000.00" end="39600.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.24"/>
+            <destProbReroute id="E28" probability="0.68"/>
+        </interval>
+        <interval begin="104400.00" end="126000.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.24"/>
+            <destProbReroute id="E28" probability="0.68"/>
+        </interval>
+        <interval begin="190800.00" end="212400.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.24"/>
+            <destProbReroute id="E28" probability="0.68"/>
+        </interval>
+        <interval begin="277200.00" end="298800.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.24"/>
+            <destProbReroute id="E28" probability="0.68"/>
+        </interval>
+        <interval begin="363600.00" end="385200.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.24"/>
+            <destProbReroute id="E28" probability="0.68"/>
+        </interval>
+        <interval begin="57600.00" end="75600.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.23"/>
+            <destProbReroute id="E28" probability="0.69"/>
+        </interval>
+        <interval begin="144000.00" end="162000.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.23"/>
+            <destProbReroute id="E28" probability="0.69"/>
+        </interval>
+        <interval begin="230400.00" end="248400.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.23"/>
+            <destProbReroute id="E28" probability="0.69"/>
+        </interval>
+        <interval begin="316800.00" end="334800.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.23"/>
+            <destProbReroute id="E28" probability="0.69"/>
+        </interval>
+        <interval begin="403200.00" end="421200.00">
+            <destProbReroute id="E31" probability="0.08"/>
+            <destProbReroute id="E27" probability="0.23"/>
+            <destProbReroute id="E28" probability="0.69"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_9" edges="E32" pos="-254.57,13.68">
+        <interval begin="0.00" end="18000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="39600.00" end="57600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="75600.00" end="104400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="126000.00" end="144000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="162000.00" end="190800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="212400.00" end="230400.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="248400.00" end="277200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="298800.00" end="316800.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="334800.00" end="363600.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="385200.00" end="403200.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="421200.00" end="432000.00">
+            <destProbReroute id="E31" probability="0.33"/>
+            <destProbReroute id="E37" probability="0.33"/>
+            <destProbReroute id="E28" probability="0.34"/>
+        </interval>
+        <interval begin="18000.00" end="39600.00">
+            <destProbReroute id="E31" probability="0.49"/>
+            <destProbReroute id="E37" probability="0.43"/>
+            <destProbReroute id="E28" probability="0.08"/>
+        </interval>
+        <interval begin="104400.00" end="126000.00">
+            <destProbReroute id="E31" probability="0.49"/>
+            <destProbReroute id="E37" probability="0.43"/>
+            <destProbReroute id="E28" probability="0.08"/>
+        </interval>
+        <interval begin="190800.00" end="212400.00">
+            <destProbReroute id="E31" probability="0.49"/>
+            <destProbReroute id="E37" probability="0.43"/>
+            <destProbReroute id="E28" probability="0.08"/>
+        </interval>
+        <interval begin="277200.00" end="298800.00">
+            <destProbReroute id="E31" probability="0.49"/>
+            <destProbReroute id="E37" probability="0.43"/>
+            <destProbReroute id="E28" probability="0.08"/>
+        </interval>
+        <interval begin="363600.00" end="385200.00">
+            <destProbReroute id="E31" probability="0.49"/>
+            <destProbReroute id="E37" probability="0.43"/>
+            <destProbReroute id="E28" probability="0.08"/>
+        </interval>
+        <interval begin="57600.00" end="75600.00">
+            <destProbReroute id="E31" probability="0.40"/>
+            <destProbReroute id="E37" probability="0.39"/>
+            <destProbReroute id="E28" probability="0.21"/>
+        </interval>
+        <interval begin="144000.00" end="162000.00">
+            <destProbReroute id="E31" probability="0.40"/>
+            <destProbReroute id="E37" probability="0.39"/>
+            <destProbReroute id="E28" probability="0.21"/>
+        </interval>
+        <interval begin="230400.00" end="248400.00">
+            <destProbReroute id="E31" probability="0.40"/>
+            <destProbReroute id="E37" probability="0.39"/>
+            <destProbReroute id="E28" probability="0.21"/>
+        </interval>
+        <interval begin="316800.00" end="334800.00">
+            <destProbReroute id="E31" probability="0.40"/>
+            <destProbReroute id="E37" probability="0.39"/>
+            <destProbReroute id="E28" probability="0.21"/>
+        </interval>
+        <interval begin="403200.00" end="421200.00">
+            <destProbReroute id="E31" probability="0.40"/>
+            <destProbReroute id="E37" probability="0.39"/>
+            <destProbReroute id="E28" probability="0.21"/>
+        </interval>
+    </rerouter>
+</additional>

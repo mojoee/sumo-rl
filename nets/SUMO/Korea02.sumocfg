@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-14 01:38:16 by Eclipse SUMO sumo Version 1.18.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Reall02-Gongguan.net.xml"/>
+        <route-files value="Korea02.rou.xml"/>
+        <additional-files value="Korea02.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="results.xml"/>
+    </output>
+
+    <processing>
+        <no-internal-links value="false"/>
+        <tls.actuated.show-detectors value="false"/>
+    </processing>
+
+</configuration>

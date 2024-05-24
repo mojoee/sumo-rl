@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-04-02 19:47:50 by Eclipse SUMO GUI Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/MODIFIEDCOPY.net.xml"/>
+        <route-files value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/LAST22.rou.xml"/>
+        <additional-files value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/backup22.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/DATA/Summary.xml"/>
+        <tripinfo-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/DATA/Tripinfo.xml"/>
+        <statistic-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO3/DATA/Statistic.xml"/>
+        <save-state.period value="5"/>
+    </output>
+
+</configuration>

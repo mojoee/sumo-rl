@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-14 16:04:28 by Eclipse SUMO netedit Version 1.18.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumocfg-file value="C:\Program Files (x86)\Eclipse\Sumo\thesis_test\last_final.sumocfg"/>
+        <additional-files value="C:\Program Files (x86)\Eclipse\Sumo\thesis_test\backup.add.xml"/>
+        <route-files value="C:\Program Files (x86)\Eclipse\Sumo\thesis_test\LAST.rou.xml"/>
+        <sumo-net-file value="C:\Program Files (x86)\Eclipse\Sumo\thesis_test\Reall02-Gongguan.net.xml"/>
+    </input>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="J34" type="static" programID="0" offset="0">
+        <phase duration="90" state="rrrrrrrrrGGGGG"/>
+        <phase duration="8" state="rrrrrrrrryyyyy"/>
+        <phase duration="40" state="rrrrGGGGGrrrrr"/>
+        <phase duration="3" state="rrrryyyyyrrrrr"/>
+        <phase duration="53" state="GGGGrrrrGrrrrr"/>
+        <phase duration="4" state="yyyyrrrryrrrrr"/>
+    </tlLogic>
+</additional>

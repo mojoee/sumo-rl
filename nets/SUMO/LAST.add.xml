@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-14 02:00:33 by Eclipse SUMO netedit Version 1.18.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Other additionals -->
+    <rerouter id="rr_0" edges="E16" pos="-292.43,-1226.35">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E44.40" probability="0.09"/>
+            <destProbReroute id="E13.40" probability="0.19"/>
+            <destProbReroute id="E12.39" probability="0.72"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_1" edges="E7" pos="-323.31,-1330.26">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E13.40" probability="0.69"/>
+            <destProbReroute id="E45.60" probability="0.21"/>
+            <destProbReroute id="E12.39" probability="0.10"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_2" edges="E22" pos="-225.70,-1355.16">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E44.40" probability="0.18"/>
+            <destProbReroute id="E13.40" probability="0.16"/>
+            <destProbReroute id="E45.60" probability="0.66"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_3" edges="E19" pos="-184.21,-1303.37">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E44.40" probability="0.85"/>
+            <destProbReroute id="E45.60" probability="0.07"/>
+            <destProbReroute id="E12.39" probability="0.08"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_4" edges="E13" pos="-182.75,-1286.83">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E44.40" probability="0.02"/>
+            <destProbReroute id="E45.60" probability="0.94"/>
+            <destProbReroute id="E12.39" probability="0.04"/>
+        </interval>
+    </rerouter>
+    <rerouter id="rr_5" edges="E12" pos="-183.13,-1267.72">
+        <interval begin="0.00" end="7200.00">
+            <destProbReroute id="E44.40" probability="0.49"/>
+            <destProbReroute id="E45.60" probability="0.15"/>
+            <destProbReroute id="E12.39" probability="0.36"/>
+        </interval>
+    </rerouter>
+</additional>

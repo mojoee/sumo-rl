@@ -5,7 +5,7 @@ from sumo_rl.exploration.epsilon_greedy import EpsilonGreedy
 class QLAgent:
     """Q-learning Agent class."""
 
-    def __init__(self, starting_state, state_space, action_space, alpha=0.5, gamma=0.95, exploration_strategy=EpsilonGreedy()):
+    def __init__(self, starting_state, state_space, action_space, alpha=0.5, gamma=0.95, exploration_strategy=EpsilonGreedy(),q_table=None):
         """Initialize Q-learning agent."""
         self.state = starting_state
         self.state_space = state_space
@@ -16,6 +16,11 @@ class QLAgent:
         self.q_table = {self.state: [0 for _ in range(action_space.n)]}
         self.exploration = exploration_strategy
         self.acc_reward = 0
+        if q_table is not None:
+            self.q_table = q_table
+        else:
+            self.q_table = {self.state: [0 for _ in range(action_space.n)]}
+
 
     def act(self):
         """Choose action based on Q-table."""

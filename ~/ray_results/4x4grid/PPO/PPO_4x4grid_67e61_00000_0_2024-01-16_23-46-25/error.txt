@@ -1,0 +1,232 @@
+Failure # 1 (occurred at 2024-01-16_23-46-35)
+[36mray::PPO.train()[39m (pid=67432, ip=140.118.201.156, actor_id=97d11e9e62141e215fd8da8801000000, repr=PPO)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 339, in train
+    result = self.step()
+             ^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py", line 852, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py", line 3042, in _run_one_training_iteration
+    results = self.training_step()
+              ^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/algorithms/ppo/ppo.py", line 407, in training_step
+    train_batch = synchronous_parallel_sample(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 83, in synchronous_parallel_sample
+    sample_batches = worker_set.foreach_worker(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/worker_set.py", line 705, in foreach_worker
+    handle_remote_call_result_errors(remote_results, self._ignore_worker_failures)
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/worker_set.py", line 78, in handle_remote_call_result_errors
+    raise r.get()
+ray.exceptions.RayTaskError(ValueError): [36mray::RolloutWorker.apply()[39m (pid=67528, ip=140.118.201.156, actor_id=b0f2443275ff9b794992520701000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x7f749aa79f50>)
+ValueError: The two structures don't have the same nested structure.
+
+First structure: type=ndarray str=[1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+Second structure: type=OrderedDict str=OrderedDict([('0', array([0.25086313, 0.09350532, 0.6813408 , 0.00685556, 0.11643846,
+       0.40822166, 0.57976675, 0.92623526, 0.4098056 , 0.5073247 ,
+       0.37528098], dtype=float32)), ('1', array([0.0590035 , 0.3942326 , 0.14992443, 0.3170372 , 0.5133664 ,
+       0.9192983 , 0.39407653, 0.33586589, 0.6864406 , 0.6993685 ,
+       0.8223952 ], dtype=float32)), ('10', array([0.06697334, 0.14224455, 0.90553844, 0.01078929, 0.4969541 ,
+       0.40658614, 0.53549916, 0.94108087, 0.97333443, 0.59932786,
+       0.03141621], dtype=float32)), ('11', array([0.89658195, 0.6462007 , 0.9998035 , 0.42245257, 0.07782765,
+       0.14376362, 0.5243955 , 0.27249512, 0.6157611 , 0.97318906,
+       0.20947668], dtype=float32)), ('12', array([0.0992299 , 0.5274629 , 0.56381553, 0.46917418, 0.78945196,
+       0.8640936 , 0.8695382 , 0.6243582 , 0.34850553, 0.6208664 ,
+       0.8632833 ], dtype=float32)), ('13', array([0.19372962, 0.7897863 , 0.47534752, 0.45052245, 0.41001943,
+       0.27785724, 0.27542678, 0.00504309, 0.9991529 , 0.26941207,
+       0.36313882], dtype=float32)), ('14', array([0.79426056, 0.7433702 , 0.5505416 , 0.459999  , 0.32839778,
+       0.9878516 , 0.44944847, 0.53423953, 0.11357045, 0.18583931,
+       0.7652248 ], dtype=float32)), ('15', array([0.9526828 , 0.90063775, 0.73497057, 0.12113996, 0.7504305 ,
+       0.21887682, 0.43617877, 0.572902  , 0.6453971 , 0.3049573 ,
+       0.7361681 ], dtype=float32)), ('2', array([0.35918182, 0.06089798, 0.5521584 , 0.41514423, 0.85026854,
+       0.37149742, 0.05448195, 0.03660959, 0.2269196 , 0.493508  ,
+       0.7145672 ], dtype=float32)), ('3', array([0.5927106 , 0.52498937, 0.20477869, 0.6497802 , 0.39844263,
+       0.2284187 , 0.73836964, 0.6361748 , 0.7505224 , 0.5386816 ,
+       0.17462176], dtype=float32)), ('4', array([0.41197982, 0.80246687, 0.07197697, 0.9054087 , 0.39234474,
+       0.6082985 , 0.64215404, 0.3272509 , 0.10198782, 0.9683149 ,
+       0.1992355 ], dtype=float32)), ('5', array([0.3503438 , 0.73426044, 0.3554324 , 0.27734864, 0.04667993,
+       0.32227594, 0.30483449, 0.08211181, 0.8047887 , 0.44388407,
+       0.49872845], dtype=float32)), ('6', array([0.99355835, 0.73810863, 0.8512266 , 0.06964484, 0.41972244,
+       0.07261305, 0.78590006, 0.5841403 , 0.43844032, 0.63666385,
+       0.6279031 ], dtype=float32)), ('7', array([0.44859895, 0.9157694 , 0.27287513, 0.8238728 , 0.8790299 ,
+       0.10022637, 0.8449427 , 0.23650223, 0.16550337, 0.61291724,
+       0.14532703], dtype=float32)), ('8', array([0.4712173 , 0.4766397 , 0.11416258, 0.94040334, 0.354091  ,
+       0.793921  , 0.00253025, 0.5280053 , 0.82465494, 0.9595107 ,
+       0.64454293], dtype=float32)), ('9', array([0.09438924, 0.9807727 , 0.1269862 , 0.12690866, 0.831992  ,
+       0.71035624, 0.6864405 , 0.4191977 , 0.63920027, 0.98014885,
+       0.22498992], dtype=float32))])
+
+More specifically: Substructure "type=OrderedDict str=OrderedDict([('0', array([0.25086313, 0.09350532, 0.6813408 , 0.00685556, 0.11643846,
+       0.40822166, 0.57976675, 0.92623526, 0.4098056 , 0.5073247 ,
+       0.37528098], dtype=float32)), ('1', array([0.0590035 , 0.3942326 , 0.14992443, 0.3170372 , 0.5133664 ,
+       0.9192983 , 0.39407653, 0.33586589, 0.6864406 , 0.6993685 ,
+       0.8223952 ], dtype=float32)), ('10', array([0.06697334, 0.14224455, 0.90553844, 0.01078929, 0.4969541 ,
+       0.40658614, 0.53549916, 0.94108087, 0.97333443, 0.59932786,
+       0.03141621], dtype=float32)), ('11', array([0.89658195, 0.6462007 , 0.9998035 , 0.42245257, 0.07782765,
+       0.14376362, 0.5243955 , 0.27249512, 0.6157611 , 0.97318906,
+       0.20947668], dtype=float32)), ('12', array([0.0992299 , 0.5274629 , 0.56381553, 0.46917418, 0.78945196,
+       0.8640936 , 0.8695382 , 0.6243582 , 0.34850553, 0.6208664 ,
+       0.8632833 ], dtype=float32)), ('13', array([0.19372962, 0.7897863 , 0.47534752, 0.45052245, 0.41001943,
+       0.27785724, 0.27542678, 0.00504309, 0.9991529 , 0.26941207,
+       0.36313882], dtype=float32)), ('14', array([0.79426056, 0.7433702 , 0.5505416 , 0.459999  , 0.32839778,
+       0.9878516 , 0.44944847, 0.53423953, 0.11357045, 0.18583931,
+       0.7652248 ], dtype=float32)), ('15', array([0.9526828 , 0.90063775, 0.73497057, 0.12113996, 0.7504305 ,
+       0.21887682, 0.43617877, 0.572902  , 0.6453971 , 0.3049573 ,
+       0.7361681 ], dtype=float32)), ('2', array([0.35918182, 0.06089798, 0.5521584 , 0.41514423, 0.85026854,
+       0.37149742, 0.05448195, 0.03660959, 0.2269196 , 0.493508  ,
+       0.7145672 ], dtype=float32)), ('3', array([0.5927106 , 0.52498937, 0.20477869, 0.6497802 , 0.39844263,
+       0.2284187 , 0.73836964, 0.6361748 , 0.7505224 , 0.5386816 ,
+       0.17462176], dtype=float32)), ('4', array([0.41197982, 0.80246687, 0.07197697, 0.9054087 , 0.39234474,
+       0.6082985 , 0.64215404, 0.3272509 , 0.10198782, 0.9683149 ,
+       0.1992355 ], dtype=float32)), ('5', array([0.3503438 , 0.73426044, 0.3554324 , 0.27734864, 0.04667993,
+       0.32227594, 0.30483449, 0.08211181, 0.8047887 , 0.44388407,
+       0.49872845], dtype=float32)), ('6', array([0.99355835, 0.73810863, 0.8512266 , 0.06964484, 0.41972244,
+       0.07261305, 0.78590006, 0.5841403 , 0.43844032, 0.63666385,
+       0.6279031 ], dtype=float32)), ('7', array([0.44859895, 0.9157694 , 0.27287513, 0.8238728 , 0.8790299 ,
+       0.10022637, 0.8449427 , 0.23650223, 0.16550337, 0.61291724,
+       0.14532703], dtype=float32)), ('8', array([0.4712173 , 0.4766397 , 0.11416258, 0.94040334, 0.354091  ,
+       0.793921  , 0.00253025, 0.5280053 , 0.82465494, 0.9595107 ,
+       0.64454293], dtype=float32)), ('9', array([0.09438924, 0.9807727 , 0.1269862 , 0.12690866, 0.831992  ,
+       0.71035624, 0.6864405 , 0.4191977 , 0.63920027, 0.98014885,
+       0.22498992], dtype=float32))])" is a sequence, while substructure "type=ndarray str=[1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]" is not
+
+During handling of the above exception, another exception occurred:
+
+[36mray::RolloutWorker.apply()[39m (pid=67528, ip=140.118.201.156, actor_id=b0f2443275ff9b794992520701000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x7f749aa79f50>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 189, in apply
+    raise e
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 178, in apply
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 84, in <lambda>
+    lambda w: w.sample(), local_worker=False, healthy_only=True
+              ^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/rollout_worker.py", line 694, in sample
+    batches = [self.input_reader.next()]
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 91, in next
+    batches = [self.get_data()]
+               ^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 276, in get_data
+    item = next(self._env_runner)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 344, in run
+    outputs = self.step()
+              ^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 370, in step
+    active_envs, to_eval, outputs = self._process_observations(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 637, in _process_observations
+    processed = policy.agent_connectors(acd_list)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/connectors/agent/pipeline.py", line 41, in __call__
+    ret = c(ret)
+          ^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/connectors/connector.py", line 265, in __call__
+    return [self.transform(d) for d in acd_list]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/connectors/connector.py", line 265, in <listcomp>
+    return [self.transform(d) for d in acd_list]
+            ^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/connectors/agent/obs_preproc.py", line 58, in transform
+    d[SampleBatch.NEXT_OBS] = self._preprocessor.transform(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/models/preprocessors.py", line 329, in transform
+    self.check_shape(observation)
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/models/preprocessors.py", line 69, in check_shape
+    observation = convert_element_to_space_type(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/ray/rllib/utils/spaces/space_utils.py", line 472, in convert_element_to_space_type
+    return tree.map_structure(map_, element, sampled_element, check_types=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/tree/__init__.py", line 433, in map_structure
+    assert_same_structure(structures[0], other, check_types=check_types)
+  File "/home/citiai-cygnus/anaconda3/lib/python3.11/site-packages/tree/__init__.py", line 288, in assert_same_structure
+    raise type(e)("%s\n"
+ValueError: The two structures don't have the same nested structure.
+
+First structure: type=ndarray str=[1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+Second structure: type=OrderedDict str=OrderedDict([('0', array([0.25086313, 0.09350532, 0.6813408 , 0.00685556, 0.11643846,
+       0.40822166, 0.57976675, 0.92623526, 0.4098056 , 0.5073247 ,
+       0.37528098], dtype=float32)), ('1', array([0.0590035 , 0.3942326 , 0.14992443, 0.3170372 , 0.5133664 ,
+       0.9192983 , 0.39407653, 0.33586589, 0.6864406 , 0.6993685 ,
+       0.8223952 ], dtype=float32)), ('10', array([0.06697334, 0.14224455, 0.90553844, 0.01078929, 0.4969541 ,
+       0.40658614, 0.53549916, 0.94108087, 0.97333443, 0.59932786,
+       0.03141621], dtype=float32)), ('11', array([0.89658195, 0.6462007 , 0.9998035 , 0.42245257, 0.07782765,
+       0.14376362, 0.5243955 , 0.27249512, 0.6157611 , 0.97318906,
+       0.20947668], dtype=float32)), ('12', array([0.0992299 , 0.5274629 , 0.56381553, 0.46917418, 0.78945196,
+       0.8640936 , 0.8695382 , 0.6243582 , 0.34850553, 0.6208664 ,
+       0.8632833 ], dtype=float32)), ('13', array([0.19372962, 0.7897863 , 0.47534752, 0.45052245, 0.41001943,
+       0.27785724, 0.27542678, 0.00504309, 0.9991529 , 0.26941207,
+       0.36313882], dtype=float32)), ('14', array([0.79426056, 0.7433702 , 0.5505416 , 0.459999  , 0.32839778,
+       0.9878516 , 0.44944847, 0.53423953, 0.11357045, 0.18583931,
+       0.7652248 ], dtype=float32)), ('15', array([0.9526828 , 0.90063775, 0.73497057, 0.12113996, 0.7504305 ,
+       0.21887682, 0.43617877, 0.572902  , 0.6453971 , 0.3049573 ,
+       0.7361681 ], dtype=float32)), ('2', array([0.35918182, 0.06089798, 0.5521584 , 0.41514423, 0.85026854,
+       0.37149742, 0.05448195, 0.03660959, 0.2269196 , 0.493508  ,
+       0.7145672 ], dtype=float32)), ('3', array([0.5927106 , 0.52498937, 0.20477869, 0.6497802 , 0.39844263,
+       0.2284187 , 0.73836964, 0.6361748 , 0.7505224 , 0.5386816 ,
+       0.17462176], dtype=float32)), ('4', array([0.41197982, 0.80246687, 0.07197697, 0.9054087 , 0.39234474,
+       0.6082985 , 0.64215404, 0.3272509 , 0.10198782, 0.9683149 ,
+       0.1992355 ], dtype=float32)), ('5', array([0.3503438 , 0.73426044, 0.3554324 , 0.27734864, 0.04667993,
+       0.32227594, 0.30483449, 0.08211181, 0.8047887 , 0.44388407,
+       0.49872845], dtype=float32)), ('6', array([0.99355835, 0.73810863, 0.8512266 , 0.06964484, 0.41972244,
+       0.07261305, 0.78590006, 0.5841403 , 0.43844032, 0.63666385,
+       0.6279031 ], dtype=float32)), ('7', array([0.44859895, 0.9157694 , 0.27287513, 0.8238728 , 0.8790299 ,
+       0.10022637, 0.8449427 , 0.23650223, 0.16550337, 0.61291724,
+       0.14532703], dtype=float32)), ('8', array([0.4712173 , 0.4766397 , 0.11416258, 0.94040334, 0.354091  ,
+       0.793921  , 0.00253025, 0.5280053 , 0.82465494, 0.9595107 ,
+       0.64454293], dtype=float32)), ('9', array([0.09438924, 0.9807727 , 0.1269862 , 0.12690866, 0.831992  ,
+       0.71035624, 0.6864405 , 0.4191977 , 0.63920027, 0.98014885,
+       0.22498992], dtype=float32))])
+
+More specifically: Substructure "type=OrderedDict str=OrderedDict([('0', array([0.25086313, 0.09350532, 0.6813408 , 0.00685556, 0.11643846,
+       0.40822166, 0.57976675, 0.92623526, 0.4098056 , 0.5073247 ,
+       0.37528098], dtype=float32)), ('1', array([0.0590035 , 0.3942326 , 0.14992443, 0.3170372 , 0.5133664 ,
+       0.9192983 , 0.39407653, 0.33586589, 0.6864406 , 0.6993685 ,
+       0.8223952 ], dtype=float32)), ('10', array([0.06697334, 0.14224455, 0.90553844, 0.01078929, 0.4969541 ,
+       0.40658614, 0.53549916, 0.94108087, 0.97333443, 0.59932786,
+       0.03141621], dtype=float32)), ('11', array([0.89658195, 0.6462007 , 0.9998035 , 0.42245257, 0.07782765,
+       0.14376362, 0.5243955 , 0.27249512, 0.6157611 , 0.97318906,
+       0.20947668], dtype=float32)), ('12', array([0.0992299 , 0.5274629 , 0.56381553, 0.46917418, 0.78945196,
+       0.8640936 , 0.8695382 , 0.6243582 , 0.34850553, 0.6208664 ,
+       0.8632833 ], dtype=float32)), ('13', array([0.19372962, 0.7897863 , 0.47534752, 0.45052245, 0.41001943,
+       0.27785724, 0.27542678, 0.00504309, 0.9991529 , 0.26941207,
+       0.36313882], dtype=float32)), ('14', array([0.79426056, 0.7433702 , 0.5505416 , 0.459999  , 0.32839778,
+       0.9878516 , 0.44944847, 0.53423953, 0.11357045, 0.18583931,
+       0.7652248 ], dtype=float32)), ('15', array([0.9526828 , 0.90063775, 0.73497057, 0.12113996, 0.7504305 ,
+       0.21887682, 0.43617877, 0.572902  , 0.6453971 , 0.3049573 ,
+       0.7361681 ], dtype=float32)), ('2', array([0.35918182, 0.06089798, 0.5521584 , 0.41514423, 0.85026854,
+       0.37149742, 0.05448195, 0.03660959, 0.2269196 , 0.493508  ,
+       0.7145672 ], dtype=float32)), ('3', array([0.5927106 , 0.52498937, 0.20477869, 0.6497802 , 0.39844263,
+       0.2284187 , 0.73836964, 0.6361748 , 0.7505224 , 0.5386816 ,
+       0.17462176], dtype=float32)), ('4', array([0.41197982, 0.80246687, 0.07197697, 0.9054087 , 0.39234474,
+       0.6082985 , 0.64215404, 0.3272509 , 0.10198782, 0.9683149 ,
+       0.1992355 ], dtype=float32)), ('5', array([0.3503438 , 0.73426044, 0.3554324 , 0.27734864, 0.04667993,
+       0.32227594, 0.30483449, 0.08211181, 0.8047887 , 0.44388407,
+       0.49872845], dtype=float32)), ('6', array([0.99355835, 0.73810863, 0.8512266 , 0.06964484, 0.41972244,
+       0.07261305, 0.78590006, 0.5841403 , 0.43844032, 0.63666385,
+       0.6279031 ], dtype=float32)), ('7', array([0.44859895, 0.9157694 , 0.27287513, 0.8238728 , 0.8790299 ,
+       0.10022637, 0.8449427 , 0.23650223, 0.16550337, 0.61291724,
+       0.14532703], dtype=float32)), ('8', array([0.4712173 , 0.4766397 , 0.11416258, 0.94040334, 0.354091  ,
+       0.793921  , 0.00253025, 0.5280053 , 0.82465494, 0.9595107 ,
+       0.64454293], dtype=float32)), ('9', array([0.09438924, 0.9807727 , 0.1269862 , 0.12690866, 0.831992  ,
+       0.71035624, 0.6864405 , 0.4191977 , 0.63920027, 0.98014885,
+       0.22498992], dtype=float32))])" is a sequence, while substructure "type=ndarray str=[1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]" is not
+Entire first structure:
+.
+Entire second structure:
+OrderedDict([('0', .), ('1', .), ('10', .), ('11', .), ('12', .), ('13', .), ('14', .), ('15', .), ('2', .), ('3', .), ('4', .), ('5', .), ('6', .), ('7', .), ('8', .), ('9', .)])

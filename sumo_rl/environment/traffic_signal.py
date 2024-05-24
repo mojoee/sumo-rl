@@ -55,6 +55,7 @@ class TrafficSignal:
         begin_time: int,
         reward_fn: Union[str, Callable],
         sumo,
+        neighbors=None
     ):
         """Initializes a TrafficSignal object.
 
@@ -83,6 +84,7 @@ class TrafficSignal:
         self.last_reward = None
         self.reward_fn = reward_fn
         self.sumo = sumo
+        self.neighbors = neighbors or []
 
         if type(self.reward_fn) is str:
             if self.reward_fn in TrafficSignal.reward_fns.keys():
@@ -221,6 +223,14 @@ class TrafficSignal:
             for veh in veh_list:
                 veh_lane = self.sumo.vehicle.getLaneID(veh)
                 acc = self.sumo.vehicle.getAccumulatedWaitingTime(veh)
+                types = self.sumo.vehicle.getEmissionClass(veh)
+                if types =="HBEFA4/PC_petrol_Euro-6ab":
+                    types = 1
+                elif types =="HBEFA4/PC_petrol_Euro-5":
+                    types = 1.03
+                else:
+                    types = 1.06
+                acc *= types
                 if veh not in self.env.vehicles:
                     self.env.vehicles[veh] = {veh_lane: acc}
                 else:

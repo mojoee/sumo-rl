@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-01-08 17:47:32 by Eclipse SUMO sumo Version 1.19.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="MODIFIEDCOPY.net.xml"/>
+        <route-files value="LAST.rou.xml"/>
+        <additional-files value="backup22.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="DATA/Summary.xml"/>
+        <tripinfo-output value="DATA/Tripinfo.xml"/>
+        <statistic-output value="DATA/Statistic.xml"/>
+    </output>
+
+</configuration>

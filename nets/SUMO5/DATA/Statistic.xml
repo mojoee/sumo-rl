@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-01-17 03:09:14 by Eclipse SUMO GUI Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/MODIFIEDCOPY.net.xml"/>
+        <route-files value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/LAST.rou.xml"/>
+        <additional-files value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/backup22.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/DATA/Summary.xml"/>
+        <tripinfo-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/DATA/Tripinfo.xml"/>
+        <statistic-output value="/home/citiai-cygnus/sumo-rl/nets/SUMO5/DATA/Statistic.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="1705432154.46" clockEnd="1705525286.94" clockDuration="93132.47" traciDuration="6.80" realTimeFactor="0.13" vehicleUpdatesPerSecond="3.85" personUpdatesPerSecond="0.00" begin="0.00" end="12001.00" duration="12001.00"/>
+    <vehicles loaded="2276" inserted="2276" running="26" waiting="0"/>
+    <teleports total="0" jam="0" yield="0" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="4"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="2250" routeLength="625.82" speed="5.07" duration="157.81" waitingTime="95.94" timeLoss="111.43" departDelay="0.57" departDelayWaiting="-1.00" totalTravelTime="355083.00" totalDepartDelay="1278.84"/>
+    <pedestrianStatistics number="0" routeLength="0.00" duration="0.00" timeLoss="0.00"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-20 02:16:19 by Eclipse SUMO netedit Version 1.18.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" begin="0.00" departLane="best" departPos="free" color="green" from="E7" to="E13.40" end="3600.00" vehsPerHour="1324.02"/>
+    <flow id="f_1" begin="0.00" departLane="best" departPos="free" color="white" from="E22" to="E45.60" end="3600.00" vehsPerHour="433.00"/>
+    <flow id="f_10" begin="0.00" departLane="best" departPos="free" color="red" from="-E33" to="E26" end="3600.00" vehsPerHour="120.00"/>
+    <flow id="f_11" begin="0.00" departLane="best" departPos="free" color="red" from="-E43" to="E40" end="3600.00" vehsPerHour="240.00"/>
+    <flow id="f_12" begin="0.00" departLane="best" departPos="free" color="red" from="-E3" to="E5" end="3600.00" vehsPerHour="60.00"/>
+    <flow id="f_13" begin="0.00" departLane="best" departPos="free" color="red" from="-E5" to="E3" end="3600.00" vehsPerHour="150.00"/>
+    <flow id="f_2" begin="0.00" departLane="best" departPos="free" color="grey" from="E19" to="E44.40" end="3600.00" vehsPerHour="1147.96"/>
+    <flow id="f_3" begin="0.00" departLane="best" departPos="free" from="E13" to="E44.40" end="3600.00" vehsPerHour="138.00"/>
+    <flow id="f_4" begin="0.00" departLane="best" departPos="free" color="red" from="E12" to="E44.40" end="3600.00" vehsPerHour="25.00"/>
+    <flow id="f_6" begin="0.00" departLane="best" departPos="free" color="blue" from="E32" to="E31" end="3600.00" vehsPerHour="1152.00"/>
+    <flow id="f_7" begin="0.00" departLane="best" departPos="free" color="red" from="E30" to="E28" end="3600.00" vehsPerHour="1522.84"/>
+    <flow id="f_8" begin="0.00" departLane="best" departPos="free" color="white" from="E24" to="E27" end="3600.00" vehsPerHour="963.08"/>
+    <flow id="f_9" begin="0.00" departLane="best" departPos="free" color="red" from="-E26" to="E33" end="3600.00" vehsPerHour="120.00"/>
+</routes>
